@@ -8,3 +8,15 @@
 #display {
     grid-column: 1 / -1;
 }
+
+#input {
+    font-size: 10px;
+    height: 1em;
+    text-align: end;
+}
+
+#output {
+    font-size: 20px;
+    height: 1em;
+    text-align: end;
+}
