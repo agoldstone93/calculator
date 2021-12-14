@@ -38,6 +38,24 @@ export default function Calculator() {
         setOutput(0)
     }
 
+    function decimalPoint() {
+        // issue with minusing decimals e.g. 2.2-1.2
+        var str = input
+        var plus = str.slice(str.lastIndexOf('+') + 1)
+        var minus = str.slice(str.lastIndexOf('-') + 1)
+        var times = str.slice(str.lastIndexOf('*') + 1)
+        var divide = str.slice(str.lastIndexOf('/') + 1)
+
+        if (!plus.includes('.'))
+            addToInput('.')
+        else if (!minus.includes('.'))
+            addToInput('.')
+        else if (!times.includes('.'))
+            addToInput('.')
+        else if (!divide.includes('.'))
+            addToInput('.')
+    }
+
     return (
         <div className='calc'>
             <div id='display'>
@@ -64,10 +82,7 @@ export default function Calculator() {
             <button 
                 className='calc-button' 
                 id='decimal' 
-                onClick={()=>{
-                    // needs some work
-                    !(input.includes('.')) && addToInput('.')
-                }}>.</button>
+                onClick={decimalPoint}>.</button>
             {/* add functionality */} <button className='calc-button' id=''></button>
             <button className='calc-button' id='equals' onClick={equals}>=</button>
         </div>
