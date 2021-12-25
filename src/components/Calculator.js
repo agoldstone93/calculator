@@ -83,7 +83,6 @@ export default function Calculator() {
                 className='calc-button' 
                 id='decimal' 
                 onClick={decimalPoint}>.</button>
-            {/* add functionality */} <button className='calc-button' id=''></button>
             <button className='calc-button' id='equals' onClick={equals}>=</button>
         </div>
     )
