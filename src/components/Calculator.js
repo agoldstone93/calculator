@@ -78,6 +78,7 @@ export default function Calculator() {
             <button className='calc-button calc-number' id='two' onClick={()=>addToInput('2')}>2</button>
             <button className='calc-button calc-number' id='three' onClick={()=>addToInput('3')}>3</button>
             <button className='calc-button' id='add' onClick={()=>addToInput('+')}>+</button>
+            <button className='calc-button calc-number' id='double-zero' onClick={()=>addToInput('00')}>00</button>
             <button className='calc-button calc-number' id='zero' onClick={()=>addToInput('0')}>0</button>
             <button 
                 className='calc-button' 
