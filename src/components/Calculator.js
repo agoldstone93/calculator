@@ -62,29 +62,31 @@ export default function Calculator() {
                 <div id='input'>{input}</div>
                 <div id='output'>{output}</div>
             </div>
-            <button className='calc-button' id='clear' onClick={clear}>C</button>
-            {/* add functionality */} <button className='calc-button' id=''></button>
-            <button className='calc-button' id='percent'>%</button>
-            <button className='calc-button' id='divide' onClick={()=>addToInput('/')}>÷</button>
-            <button className='calc-button calc-number' id='seven' onClick={()=>addToInput('7')}>7</button>
-            <button className='calc-button calc-number' id='eight' onClick={()=>addToInput('8')}>8</button>
-            <button className='calc-button calc-number' id='nine' onClick={()=>addToInput('9')}>9</button>
-            <button className='calc-button' id='multiply' onClick={()=>addToInput('*')}>×</button>
-            <button className='calc-button calc-number' onClick={()=>addToInput('4')} id='four'>4</button>
-            <button className='calc-button calc-number' onClick={()=>addToInput('5')} id='five'>5</button>
-            <button className='calc-button calc-number' onClick={()=>addToInput('6')} id='six'>6</button>
-            <button className='calc-button' id='subtract' onClick={()=>addToInput('-')}>-</button>
-            <button className='calc-button calc-number' id='one' onClick={()=>addToInput('1')}>1</button>
-            <button className='calc-button calc-number' id='two' onClick={()=>addToInput('2')}>2</button>
-            <button className='calc-button calc-number' id='three' onClick={()=>addToInput('3')}>3</button>
-            <button className='calc-button' id='add' onClick={()=>addToInput('+')}>+</button>
-            <button className='calc-button calc-number' id='double-zero' onClick={()=>addToInput('00')}>00</button>
-            <button className='calc-button calc-number' id='zero' onClick={()=>addToInput('0')}>0</button>
-            <button 
-                className='calc-button' 
-                id='decimal' 
-                onClick={decimalPoint}>.</button>
-            <button className='calc-button' id='equals' onClick={equals}>=</button>
+            <div className='calc-buttons'>
+                <button className='calc-button' id='clear' onClick={clear}>C</button>
+                {/* add functionality */} <button className='calc-button' id=''></button>
+                <button className='calc-button' id='percent'>%</button>
+                <button className='calc-button maths-function' id='divide' onClick={()=>addToInput('/')}>÷</button>
+                <button className='calc-button calc-number' id='seven' onClick={()=>addToInput('7')}>7</button>
+                <button className='calc-button calc-number' id='eight' onClick={()=>addToInput('8')}>8</button>
+                <button className='calc-button calc-number' id='nine' onClick={()=>addToInput('9')}>9</button>
+                <button className='calc-button maths-function' id='multiply' onClick={()=>addToInput('*')}>×</button>
+                <button className='calc-button calc-number' onClick={()=>addToInput('4')} id='four'>4</button>
+                <button className='calc-button calc-number' onClick={()=>addToInput('5')} id='five'>5</button>
+                <button className='calc-button calc-number' onClick={()=>addToInput('6')} id='six'>6</button>
+                <button className='calc-button maths-function' id='subtract' onClick={()=>addToInput('-')}>-</button>
+                <button className='calc-button calc-number' id='one' onClick={()=>addToInput('1')}>1</button>
+                <button className='calc-button calc-number' id='two' onClick={()=>addToInput('2')}>2</button>
+                <button className='calc-button calc-number' id='three' onClick={()=>addToInput('3')}>3</button>
+                <button className='calc-button maths-function' id='add' onClick={()=>addToInput('+')}>+</button>
+                <button className='calc-button calc-number' id='double-zero' onClick={()=>addToInput('00')}>00</button>
+                <button className='calc-button calc-number' id='zero' onClick={()=>addToInput('0')}>0</button>
+                <button 
+                    className='calc-button' 
+                    id='decimal' 
+                    onClick={decimalPoint}>.</button>
+                <button className='calc-button' id='equals' onClick={equals}>=</button>
+            </div>
         </div>
     )
 }
