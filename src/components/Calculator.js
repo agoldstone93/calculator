@@ -8,7 +8,6 @@ export default function Calculator() {
     const [output, setOutput] = useState(0)
     const [input, setInput] = useState('')
 
-    
     useEffect(() => {
         window.addEventListener('keydown', handleKeydown)
         
@@ -25,7 +24,13 @@ export default function Calculator() {
     
 
     function addToInput(value){
-        setInput(prevInput => prevInput+value)
+        // if last value entered is a math function, don't add another
+        // if value is different function, use that instead 
+        if ((input.slice(-1) === '+' || input.slice(-1) === '-' || input.slice(-1) === '*' || input.slice(-1) === '/') &&
+            (value === '+' || value === '-' || value === '*' || value === '/'))
+            setInput(prevInput => prevInput.slice(0,-1)+value)
+        else
+            setInput(prevInput => prevInput + value)
     }
 
     function equals(){
